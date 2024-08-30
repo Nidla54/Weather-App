@@ -1,0 +1,56 @@
+<div class="bg-lime-50 w-screen h-screen flex items-center justify-center ">
+  <!-- BODY -->
+  <div class="bg-blue-300 h-4/5 w-2/6 rounded bg-transparent[0.2]">
+    <!-- Body of app -->
+
+
+    <div class="mt-8 justify-center flex">
+      <!-- Search Bar -->
+
+      <input class="w-72 h-10 text-2xl rounded-l" type="text" [(ngModel)]="userInput" placeholder="Enter city">
+      <button class="bg-white rounded-r p-1" (click)="getWeather()">Search</button>
+    </div>
+
+    <div class="pt-7 flex justify-center text-3xl font-mono capitalize text-cyan-800">
+      <!-- Name of city -->
+      <p>City name:{{data.name}}</p>
+    </div>
+
+    <div class="grid  grid-cols-2 grid-rows-2 gap-4 mt-7 justify-center font-mono">
+      <!-- 4 information -->
+
+      <div class=" w-full h-40 flex items-center text-2xl pl-8">
+        <!-- Wind speed -->
+
+        <p>
+          Wind Speed: {{data.wind.speed}}</p>
+      </div>
+
+      <div class=" w-full h-40 flex items-center text-2xl pl-8">
+        <!-- Wind speed -->
+
+        <p> Temp: {{data.main.temp}}</p>
+      </div>
+      <div class=" w-full h-40 flex items-center text-2xl pl-8">
+
+        <!-- Wind speed -->
+
+        <p> Pressure: {{data.main.pressure}}</p>
+      </div>
+
+      <div class=" w-full h-40 flex items-center text-2xl pl-8">
+
+        <!-- Wind speed -->
+
+        <p> Humidity: {{data.main.humidity}}</p>
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+</div>
